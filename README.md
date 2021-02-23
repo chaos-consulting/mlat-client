@@ -11,6 +11,21 @@ There is also support for running in a mode used to feed multilateration
 information to FlightAware via piaware. In this mode, the client is started
 automatically by piaware.
 
+## Debian packages
+
+We provide deb packages for amd64 and armhf (Raspbian). If you like to build your own packages, see instructions below.
+
+## Setup
+
+Download the package, run
+
+    $ sudo dpkg -i <mlat-client>.deb
+    $ sudo dpkg-reconfigure mlat-client
+    
+and follow the instructions. Enter the station name we've given you in advance. The default parameters should be okay for most dump1090 setups.
+
+Be aware: Inaccurate station positions will result in more inaccurate aircraft positions. The position you enter will be transmitted to our server. It will only be stored in RAM, while your station is transmitting packages. Also, we don't transmit the station positions back to clients. For the sake of math: Be as accurate as your privacy allows.
+
 ## Building
 
 To build a Debian (or Ubuntu, Raspbian, etc) package that includes config
