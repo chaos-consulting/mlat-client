@@ -9,7 +9,7 @@ Description: Start the standalone multilateration client?
  Disable this if you are providing multilateration data to Flightaware
  via piaware, or if you will start mlat-client via some other mechanism.
 Type: boolean
-Default: false
+Default: true
 
 Template: mlat-client/run-as-user
 Description: User to run mlat-client as:
@@ -25,7 +25,7 @@ Description: Multilateration server (host:port) to connect to:
  connect to. The administrator of the server will be able to provide
  this information.
 Type: string
-Default: mlat.mutability.co.uk:40147
+Default: mlat.chaos-consulting.de:3333
 
 Template: mlat-client/server-user
 Description: User to log into the server as:
@@ -97,7 +97,7 @@ Description: Input host:port for Mode S traffic:
  For Radarcapes, use port 10002.
  For SBS, use port 30006.
 Type: string
-Default: localhost:30005
+Default: 127.0.0.1:30005
 
 Template: mlat-client/results
 Description: List of result connections/listeners:
@@ -107,7 +107,7 @@ Description: List of result connections/listeners:
  .
  A value of "none" disables the output of results.
 Type: string
-Default: basestation,listen,31003
+Default: beast,connect,127.0.0.1:30004
 
 Template: mlat-client/extra-args
 Description: Extra arguments to pass to mlat-client:
