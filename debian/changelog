@@ -1,3 +1,10 @@
+mlat-client-c2is (0.3.2-2) stable; urgency=medium
+
+  * Put mlat-client in a virtual enviroment to be compatible to multiple instances of mlat-client running on the client
+
+ -- Skymaker <lukas@skymaker.info>  Sat, 06 Mar 2021 12:30:00 +0200
+
+
 mlat-client (0.3.2-1) stable; urgency=medium
 
   * First Chaos Consulting release, even with adsbxchange 0.3.2
