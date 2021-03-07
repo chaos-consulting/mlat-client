@@ -21,7 +21,7 @@ Download the package, run
 
     $ sudo apt install stunnel4
     $ sudo dpkg -i <mlat-client-c2is>.deb
-    $ sudo dpkg-reconfigure mlat-client
+    $ sudo dpkg-reconfigure mlat-client-c2is
     
 and follow the instructions. Enter the station name and API-key we've given you in advance. The default parameters should be okay for most dump1090 setups.
 
