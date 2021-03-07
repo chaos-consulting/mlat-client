@@ -1,0 +1,2 @@
+debian/config-template usr/share/mlat-client-c2is
+debian/mlat-client-c2is.conf etc/stunnel

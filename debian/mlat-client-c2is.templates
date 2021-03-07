@@ -1,4 +1,4 @@
-Template: mlat-client/start-client
+Template: mlat-client-c2is/start-client
 Description: Start the standalone multilateration client?
  The multilateration client can be started automatically in standalone mode
  based on the answers to these configuration questions.
@@ -11,38 +11,36 @@ Description: Start the standalone multilateration client?
 Type: boolean
 Default: true
 
-Template: mlat-client/run-as-user
+Template: mlat-client-c2is/run-as-user
 Description: User to run mlat-client as:
  When started automatically, mlat-client runs as an unprivileged system user. 
  This user will be created if it does not yet exist.
 Type: string
 Default: mlat
 
-Template: mlat-client/server-hostport
+Template: mlat-client-c2is/server-hostport
 Description: Multilateration server (host:port) to connect to:
  The multilateration client connects to a server that processes the
  collected data. This setting controls which server the client will
  connect to. The administrator of the server will be able to provide
  this information.
 Type: string
-Default: mlat.chaos-consulting.de:3333
+Default: 127.0.0.1:3333
 
-Template: mlat-client/server-user
+Template: mlat-client-c2is/server-user
 Description: User to log into the server as:
- The multilateration client identifies itself to the server via a short
- username. This can be anything you like, it's just used to identify who is
- connecting. Each receiver should have a different value.
+ Here you have to enter the station name and the API-key we gave you, separated by a colon.
 Type: string
 Default:
 
-Template: mlat-client/log-file
+Template: mlat-client-c2is/log-file
 Description: Path to log to:
  When started automatically, mlat-client will log its output somewhere. This
  log mostly contains not very interesting connection info.
 Type: string
-Default: /var/log/mlat-client.log
+Default: /var/log/mlat-client-c2is.log
 
-Template: mlat-client/receiver-lat
+Template: mlat-client-c2is/receiver-lat
 Description: Latitude of receiver, in decimal degrees:
  The multilateration server must know the location of the receiver. This should
  be the position of the antenna, ideally to within about 25m. A four-decimal-
@@ -50,7 +48,7 @@ Description: Latitude of receiver, in decimal degrees:
 Type: string
 Default:
 
-Template: mlat-client/receiver-lon
+Template: mlat-client-c2is/receiver-lon
 Description: Longitude of receiver, in decimal degrees:
  The multilateration server must know the location of the receiver. This should
  be the position of the antenna, ideally to within about 25m. A four-decimal-
@@ -58,7 +56,7 @@ Description: Longitude of receiver, in decimal degrees:
 Type: string
 Default:
 
-Template: mlat-client/receiver-alt
+Template: mlat-client-c2is/receiver-alt
 Description: Altitude of receiver, in metres (height above ellipsoid):
  The multilateration server must know the location of the receiver. This should
  be the position of the antenna, ideally to within about 25m. A GPS-derived
@@ -67,7 +65,7 @@ Description: Altitude of receiver, in metres (height above ellipsoid):
 Type: string
 Default:
 
-Template: mlat-client/input-type
+Template: mlat-client-c2is/input-type
 Description: Receiver type: 
  This setting sets the type of receiver that Mode S messages will
  be read from.
@@ -87,7 +85,7 @@ Type: select
 Choices: dump1090, beast, radarcape_gps, radarcape_12mhz, sbs
 Default: dump1090
 
-Template: mlat-client/input-hostport
+Template: mlat-client-c2is/input-hostport
 Description: Input host:port for Mode S traffic:
  The multilateration client needs to read Mode S messages from a
  receiver such as dump1090. Here you can configure the host and port that the
@@ -99,7 +97,7 @@ Description: Input host:port for Mode S traffic:
 Type: string
 Default: 127.0.0.1:30005
 
-Template: mlat-client/results
+Template: mlat-client-c2is/results
 Description: List of result connections/listeners:
  The multilateration client can return the calculated aircraft positions in
  various forms. This settings accepts a list of connections or listeners to
@@ -109,24 +107,24 @@ Description: List of result connections/listeners:
 Type: string
 Default: beast,connect,127.0.0.1:30004
 
-Template: mlat-client/extra-args
+Template: mlat-client-c2is/extra-args
 Description: Extra arguments to pass to mlat-client:
  Here you can add any extra arguments you want to pass to mlat-client.
 Type: string
 Default:
 
-Template: mlat-client/invalid-is_not_empty
+Template: mlat-client-c2is/invalid-is_not_empty
 Description: Value cannot be empty.
 Type: error
 
-Template: mlat-client/invalid-is_port_number
+Template: mlat-client-c2is/invalid-is_port_number
 Description: Value must be a valid port number (1024-65535), or zero to disable.
 Type: error
 
-Template: mlat-client/invalid-is_number
+Template: mlat-client-c2is/invalid-is_number
 Description: Value must be a decimal number
 Type: error
 
-Template: mlat-client/invalid-is_non_root_user
+Template: mlat-client-c2is/invalid-is_non_root_user
 Description: Value must be a username (without spaces) that isn't root.
 Type: error

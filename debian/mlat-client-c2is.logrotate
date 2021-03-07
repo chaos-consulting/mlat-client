@@ -1,4 +1,4 @@
-/var/log/mlat-client.log {
+/var/log/mlat-client-c2is.log {
   daily
   rotate 4
   copytruncate

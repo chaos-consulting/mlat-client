@@ -21,7 +21,8 @@ set -e
 
 case "$1" in
     purge)
-        rm -f /etc/default/mlat-client
+        rm -f /etc/default/mlat-client-c2is
+        rm -f /etc/stunnel/mlat-client-c2is.conf
     ;;
 
     remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
